@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        td,tr{
+            border:1px solid black;
+        }
+
+        table{
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:1em;
+            width:50%;
+            border:1px solid black;
+        }
+        #tabulatorInputs{
+            border: 5px solid red;
+            width:50%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        body{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    
+    <script src="JavaScript.js"></script>
+    <div id="tabulatorInputs">
+        <h1>Advanced Grade Tabulator</h1>
+            
+            First name: <input type="text" id="firstName"/><br />
+            Last name: <input type="text" /><br />
+            Midterm(100): <input type="number" id="mid-term" class="number"/><br />
+            Homework(100): <input type="number" id="homework" class="number"/><br />
+            Exam(100): <input type="number" id="exam" class="number"/><br />
+            Attendance(100): <input type="number" id="attendance" class="number"/><br />
+            <input type="button" onclick="submit()" value="Submit Entry"/> 
+            <input type="button" onclick="show()" value="Show Scores"/> 
+            <input type="button" onclick="average()" value="Overall Average"/> 
+            <input type="reset" value="Reset" />
+        
+    </div>
+    <div id="table" style="text-align:center; "></div>
+   
+</body>
+</html>
