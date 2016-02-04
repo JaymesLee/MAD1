@@ -24,13 +24,22 @@
         body{
             text-align:center;
         }
+        #avgtable{
+            border: 2px solid black;
+            float:right;
+        }
     </style>
 </head>
-<body>
+<body onload="average()">
     
     <script src="JavaScript.js"></script>
+
+    <div id="avgtable">
+        <h2>Average:</h2></ br>
+        <p id="avg"></p>
+    </div>
     <div id="tabulatorInputs">
-        <h1>Advanced Grade Tbulator</h1>
+        <h1>Advanced Grade Tabulator</h1>
             
             First name: <input type="text" id="firstName"/><br />
             Last name: <input type="text" /><br />
@@ -38,13 +47,22 @@
             Homework(100): <input type="number" id="homework" class="number"/><br />
             Exam(100): <input type="number" id="exam" class="number"/><br />
             Attendance(100): <input type="number" id="attendance" class="number"/><br />
-            <input type="button" onclick="submit()" value="Submit Entry"/> 
-            <input type="button" onclick="show()" value="Show Scores"/> 
-            <input type="button" onclick="average()" value="Overall Average"/> 
-            <input type="reset" value="Reset" />
+            <input type="button" onclick="submit()" value="Submit Entry"/>  
+            
+            <input type="button" onclick="reset()" value="Reset" />
+            <input type="button" onclick="treset()" value="Total Reset" />
         
     </div>
+    <div>
+        <form>
+            <input type="radio" name="order" onclick="orderData('asc')" checked>Order By Ascending
+            <input type="radio" name="order" onclick="orderData('des')" >Order By Descending
+        </form>
+    </div>
+
     <div id="table" style="text-align:center; "></div>
+
+
    
 </body>
 </html>
