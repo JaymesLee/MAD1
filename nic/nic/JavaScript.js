@@ -52,7 +52,7 @@ function submit() {
             }
         } else {
             if (inputs[x].value.match(subregex) && inputs[x].value >= 0 && inputs[x].value <= 100) {
-                if (inputs[x] != "" && (inputs[x].type == "text" || inputs[x].type == "number")) {
+                if (inputs[x] != "" || inputs[x].type == "number") {
                     row.push(inputs[x].value);
                 }
             } else {
